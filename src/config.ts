@@ -1,5 +1,7 @@
 import { config } from "dotenv"
 import { cwd } from "process"
+import { join } from "path"
+import { pathToFileURL } from "url"
 
 const conf = config()
 
@@ -17,9 +19,10 @@ if (!conf.parsed["SECRET_KEY"]) {
 
 let _config
 try {
-    _config = await import(cwd() + "/config/auth.js")
+    const configPath = pathToFileURL(join(cwd(), "config", "auth.js")).href
+    _config = (await import(configPath))
 } catch (e: any) {
-    console.log(`[auth] config: config file not found, applying default config.`)
+    console.log(`[auth] config: config file not found, applying default config.`, e)
     _config = {
         TOKEN_COOKIE_NAME: "auth_token",
         TOKEN_COOKIE_EXPIRES: 1800000,
