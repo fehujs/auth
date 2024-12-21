@@ -1,10 +1,8 @@
-import { Middleware, types as FHSTypes } from "@fehujs/http-server"
+import { HttpContext, Middleware } from "@fehujs/http-server"
 
 import { CONFIG } from "./config"
 import { User } from "./models/user"
 
-
-type HttpContext = FHSTypes.HttpContext
 
 export class AuthMiddleware extends Middleware {
     public async handle({ req, request, response}: HttpContext) {

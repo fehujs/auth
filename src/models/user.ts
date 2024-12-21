@@ -2,14 +2,12 @@ import { hash, verify } from "argon2"
 
 import { BaseModel, provider, Table } from "@fehujs/database"
 import { randomId } from "@fehujs/helpers"
-import { Request, Response, types as FHSTypes } from "@fehujs/http-server"
+import { HttpContext, Request, Response } from "@fehujs/http-server"
 
 import { CONFIG } from "../config"
 import { AddUserMigration } from "../migrations/add_users"
 import { AuthToken } from "./auth_token"
 
-
-type HttpContext = FHSTypes.HttpContext
 
 const AUTH_TOKEN_COOKIE_NAME = CONFIG.TOKEN_COOKIE_NAME
 const AUTH_TOKEN_COOKIE_EXPIRES = CONFIG.TOKEN_COOKIE_EXPIRES

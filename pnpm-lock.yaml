@@ -15,8 +15,8 @@ importers:
         specifier: ^0.1.0
         version: 0.1.0
       '@fehujs/http-server':
-        specifier: ^0.1.2
-        version: 0.1.2
+        specifier: ^0.1.3
+        version: 0.1.3
       argon2:
         specifier: ^0.41.1
         version: 0.41.1
@@ -204,8 +204,11 @@ packages:
   '@fehujs/helpers@0.1.0':
     resolution: {integrity: sha512-bNLu94ZnzMv512vT4lJuikQGtkMkQxJhqDC4G7w0JNCUS0VmK5RbOh5Kc1rkNxZD3JfOCPn6rlkz0PciJ8gsaQ==}
 
-  '@fehujs/http-server@0.1.2':
-    resolution: {integrity: sha512-uyD+hCNozUZJzuUWF/sWaBbt/mzRe1jAN//GbU1w76jg+2qYdzOv0cDy0cj+Su+FIlQXi4Xt/E4cDBq0pCH0MQ==}
+  '@fehujs/helpers@0.1.1':
+    resolution: {integrity: sha512-0IMsTTiULhiEqUF4sxT0GcHWkwAZV7AO2X5S3DCXs097YBKxQ6rcPjfDfZaiFXnmhFPGyaOj+/TQrtFjzReVDw==}
+
+  '@fehujs/http-server@0.1.3':
+    resolution: {integrity: sha512-hqtZWaCjn3dldUmVeJiZw6aZTl8t7SFejGWefc6sIc/612T23FKLyCccSHCUY11OdGvC0NGh7qgokhTxca+M0w==}
 
   '@fehujs/ioc@1.0.3':
     resolution: {integrity: sha512-ntduBK2ciX6w/DSBrnxpdkK+icgVaBOM17Q089nfAcnGZdRWH9sufoAD8l3Rgdi3VXarBmAiKNrZTRZEvUrMZA==}
@@ -983,8 +986,13 @@ snapshots:
       '@types/node': 22.10.2
       typescript: 5.7.2
 
-  '@fehujs/http-server@0.1.2':
+  '@fehujs/helpers@0.1.1':
     dependencies:
+      '@paralleldrive/cuid2': 2.2.2
+
+  '@fehujs/http-server@0.1.3':
+    dependencies:
+      '@fehujs/helpers': 0.1.1
       '@fehujs/ioc': 1.0.3
       '@fehujs/template-parser': 1.0.1
       dotenv: 16.4.7
