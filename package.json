@@ -1,0 +1,49 @@
+{
+  "name": "@fehujs/auth",
+  "version": "0.1.0",
+  "description": "User authentication build-in module for Fehujs apps",
+  "main": "build/index.js",
+  "type": "module",
+  "files": [
+    "./build/**/*",
+    "README.md",
+    "LICENCE"
+  ],
+  "exports": {
+    ".": "./build/index.js"
+  },
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "build:types": "tsc -d --declarationDir build --declarationMap --emitDeclarationOnly",
+    "release": "pnpm build && pnpm build:types",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fehujs/auth.git"
+  },
+  "keywords": [
+    "auth"
+  ],
+  "author": "Pascal LLEONART",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fehujs/auth/issues"
+  },
+  "homepage": "https://github.com/fehujs/auth#readme",
+  "devDependencies": {
+    "@fehujs/build": "^0.1.1",
+    "@fehujs/tsconfig": "^1.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@fehujs/database": "^0.1.0",
+    "@fehujs/helpers": "^0.1.0",
+    "@fehujs/http-server": "^0.1.2",
+    "argon2": "^0.41.1",
+    "dotenv": "^16.4.7",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

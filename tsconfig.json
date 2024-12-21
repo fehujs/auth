@@ -1,0 +1,12 @@
+{
+    "extends": "@fehujs/tsconfig/tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./build",
+        "rootDir": "./src",
+        "declaration": true,
+        "removeComments": false,
+    },
+    "lib": ["@types/node"],
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}
