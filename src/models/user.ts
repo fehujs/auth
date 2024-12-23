@@ -11,7 +11,7 @@ import { AuthToken } from "./auth_token"
 
 const AUTH_TOKEN_COOKIE_NAME = CONFIG.TOKEN_COOKIE_NAME
 const AUTH_TOKEN_COOKIE_EXPIRES = CONFIG.TOKEN_COOKIE_EXPIRES
-const saltRounds = CONFIG.SALT_ROUNDS
+const salt = CONFIG.SALT
 
 export class User extends BaseModel {
     public static table: Table = (new AddUserMigration()).getTable()
@@ -30,7 +30,7 @@ export class User extends BaseModel {
             throw Error("Email already taken")
         }
 
-        const hashedPsw = await hash(options.password, { salt: saltRounds })
+        const hashedPsw = await hash(options.password, { salt: salt ? Buffer.from(salt) : undefined })
         const id = randomId('usr')
 
         const user = new User()

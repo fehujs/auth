@@ -22,11 +22,11 @@ try {
     const configPath = pathToFileURL(join(cwd(), "src", "config", "auth.js")).href
     _config = (await import(configPath)).default
 } catch (e: any) {
-    console.log(`[auth] config: config file not found, applying default config.`, e)
+    console.log(`[auth] config: config file not found, applying default config.`)
     _config = {
         TOKEN_COOKIE_NAME: "auth_token",
         TOKEN_COOKIE_EXPIRES: 1800000,
-        SALT_ROUNDS: 10
+        SALT: undefined
     }
 }
 

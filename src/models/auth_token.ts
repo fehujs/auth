@@ -11,7 +11,7 @@ import { User } from "./user"
 const AUTH_TOKEN_COOKIE_EXPIRES = CONFIG.TOKEN_COOKIE_EXPIRES
 
 function generateAccessToken(id: string) {
-    return jwt.sign({ id: id }, CONFIG.SECRET_KEY, { expiresIn: AUTH_TOKEN_COOKIE_EXPIRES })
+    return jwt.sign({ id: id }, CONFIG.secret_key, { expiresIn: AUTH_TOKEN_COOKIE_EXPIRES })
 }
 
 export class AuthToken extends BaseModel {
@@ -53,7 +53,7 @@ export class AuthToken extends BaseModel {
     public static async getUserIdFromToken(token: string): Promise<string | null> {
         try {
             return new Promise((resolve) => {
-                jwt.verify(token, CONFIG.SECRET_KEY, (err: any, data: any) => {
+                jwt.verify(token, CONFIG.secret_key, (err: any, data: any) => {
                     if (err) throw err
                     resolve(data.id)
                 })

@@ -8,7 +8,7 @@ import { User } from "./models/user"
 type AuthConfig = {
     TOKEN_COOKIE_NAME: string
     TOKEN_COOKIE_EXPIRES: number
-    SALT_ROUNDS: number
+    SALT?: string
 }
 
 export {

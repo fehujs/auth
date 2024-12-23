@@ -9,7 +9,7 @@ export class AuthMiddleware extends Middleware {
         const user = await User.getCurrentUser(request)
 
         if (!user) {
-            response = request.cookieHandler.deleteCookie(response, CONFIG.modules.auth.TOKEN_COOKIE_NAME)
+            response = request.cookieHandler.deleteCookie(response, CONFIG.TOKEN_COOKIE_NAME)
             response = response.redirect("/users/login?loginRequired")
             return { req, request, response }
         }
