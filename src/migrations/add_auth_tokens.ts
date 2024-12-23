@@ -1,4 +1,6 @@
-import { BaseMigration, CreateTable, provider, Table } from "@fehujs/database"
+import { BaseMigration, CreateTable, Table } from "@fehujs/database"
+
+import { getDbProvider } from "../internals"
 
 
 export class AddAuthTokenMigration extends BaseMigration {
@@ -33,10 +35,10 @@ export class AddAuthTokenMigration extends BaseMigration {
     }
 
     public async up() {
-        provider.createTable(this.table as CreateTable)
+        await (await getDbProvider()).createTable(this.table as CreateTable)
     }
 
     public async down() {
-        provider.dropTable(this.table)
+        await (await getDbProvider()).dropTable(this.table)
     }
 }

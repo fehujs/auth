@@ -1,6 +1,6 @@
 import { hash, verify } from "argon2"
 
-import { BaseModel, provider, Table } from "@fehujs/database"
+import { BaseModel, Table } from "@fehujs/database"
 import { randomId } from "@fehujs/helpers"
 import { HttpContext, Request, Response } from "@fehujs/http-server"
 
@@ -35,7 +35,7 @@ export class User extends BaseModel {
 
         const user = new User()
         user._setDatas(
-            await provider.insert(
+            await this.provider.insert(
                 User.table, 
                 { id, name: options.name, email: options.email, password: hashedPsw}
             )

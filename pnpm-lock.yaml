@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fehujs/database':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^0.1.6
+        version: 0.1.6
       '@fehujs/helpers':
         specifier: ^0.1.0
         version: 0.1.0
@@ -28,8 +28,8 @@ importers:
         version: 9.0.2
     devDependencies:
       '@fehujs/build':
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.2.0
+        version: 0.2.0
       '@fehujs/tsconfig':
         specifier: ^1.0.0
         version: 1.0.0
@@ -198,8 +198,11 @@ packages:
   '@fehujs/build@0.1.1':
     resolution: {integrity: sha512-DzV5kWKJGU4qqQKXxTDEaLWx4fPiPlmeH5AtzwD2xUVx9QNuY0vy9tYSm7ZHoLzXO1o/8C72js0PGy8XY2Tyrw==}
 
-  '@fehujs/database@0.1.0':
-    resolution: {integrity: sha512-vBJrF18W2UwGekP6dJsow2yVS0pHlxxMJ2rovZ4OSBYmZfc6hZumUZjcdj5v2C0VmzTbBR05kQ6CDKnhZVOIjw==}
+  '@fehujs/build@0.2.0':
+    resolution: {integrity: sha512-5eRH3gmjOvRm7FpKgF+UAehxSSbQ60fP2fwuAqY3fzOJIbg9cPbe7pTMi4dX2POYaQyFPdTTznYvxn5IJyjNxg==}
+
+  '@fehujs/database@0.1.6':
+    resolution: {integrity: sha512-i/ZJ1RctRSdWGde0haCKHRx2ygj6taZBuyejgK2TSsa41ydOKLEQ2czyhLk+B0Is1lle6DyagKoDjwkgh6I7Sw==}
 
   '@fehujs/helpers@0.1.0':
     resolution: {integrity: sha512-bNLu94ZnzMv512vT4lJuikQGtkMkQxJhqDC4G7w0JNCUS0VmK5RbOh5Kc1rkNxZD3JfOCPn6rlkz0PciJ8gsaQ==}
@@ -964,7 +967,11 @@ snapshots:
     dependencies:
       esbuild: 0.24.2
 
-  '@fehujs/database@0.1.0':
+  '@fehujs/build@0.2.0':
+    dependencies:
+      esbuild: 0.24.2
+
+  '@fehujs/database@0.1.6':
     dependencies:
       knex: 3.1.0(sqlite3@5.1.7)
       sqlite3: 5.1.7

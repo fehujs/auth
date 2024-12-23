@@ -19,8 +19,8 @@ if (!conf.parsed["SECRET_KEY"]) {
 
 let _config
 try {
-    const configPath = pathToFileURL(join(cwd(), "config", "auth.js")).href
-    _config = (await import(configPath))
+    const configPath = pathToFileURL(join(cwd(), "src", "config", "auth.js")).href
+    _config = (await import(configPath)).default
 } catch (e: any) {
     console.log(`[auth] config: config file not found, applying default config.`, e)
     _config = {

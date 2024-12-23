@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken"
 
-import { BaseModel, provider, Table } from "@fehujs/database"
+import { BaseModel, Table } from "@fehujs/database"
 import { randomId } from "@fehujs/helpers"
 
 import { CONFIG } from "../config"
@@ -39,7 +39,7 @@ export class AuthToken extends BaseModel {
 
         const token = new AuthToken()
         token._setDatas(
-            await provider.insert(AuthToken.table, {
+            await this.provider.insert(AuthToken.table, {
                 id,
                 userId: options.userId,
                 token: generateAccessToken(options.userId),
