@@ -1,6 +1,6 @@
 {
   "name": "@fehujs/auth",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "User authentication build-in module for Fehujs apps",
   "main": "build/index.js",
   "type": "module",
