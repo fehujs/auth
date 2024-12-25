@@ -1,6 +1,6 @@
 {
   "name": "@fehujs/auth",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "User authentication build-in module for Fehujs apps",
   "main": "build/index.js",
   "type": "module",
@@ -40,8 +40,8 @@
   },
   "dependencies": {
     "@fehujs/database": "^0.1.7",
-    "@fehujs/helpers": "^0.1.0",
-    "@fehujs/http-server": "^0.1.5",
+    "@fehujs/helpers": "^0.1.2",
+    "@fehujs/http-server": "^0.1.6",
     "argon2": "^0.41.1",
     "dotenv": "^16.4.7",
     "jsonwebtoken": "^9.0.2"

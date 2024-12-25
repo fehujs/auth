@@ -12,11 +12,11 @@ importers:
         specifier: ^0.1.7
         version: 0.1.7
       '@fehujs/helpers':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^0.1.2
+        version: 0.1.2
       '@fehujs/http-server':
-        specifier: ^0.1.5
-        version: 0.1.5
+        specifier: ^0.1.6
+        version: 0.1.6
       argon2:
         specifier: ^0.41.1
         version: 0.41.1
@@ -195,26 +195,20 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fehujs/build@0.1.1':
-    resolution: {integrity: sha512-DzV5kWKJGU4qqQKXxTDEaLWx4fPiPlmeH5AtzwD2xUVx9QNuY0vy9tYSm7ZHoLzXO1o/8C72js0PGy8XY2Tyrw==}
-
   '@fehujs/build@0.2.0':
     resolution: {integrity: sha512-5eRH3gmjOvRm7FpKgF+UAehxSSbQ60fP2fwuAqY3fzOJIbg9cPbe7pTMi4dX2POYaQyFPdTTznYvxn5IJyjNxg==}
 
   '@fehujs/database@0.1.7':
     resolution: {integrity: sha512-iHVDoGH69ERXBcIjzjj3KMZxtyryiT5UgBOcl2kr7jcPFsNyMF1qlN+wGZDgYYqj8PT0a0Ivfeex0cZUJxxAcg==}
 
-  '@fehujs/helpers@0.1.0':
-    resolution: {integrity: sha512-bNLu94ZnzMv512vT4lJuikQGtkMkQxJhqDC4G7w0JNCUS0VmK5RbOh5Kc1rkNxZD3JfOCPn6rlkz0PciJ8gsaQ==}
+  '@fehujs/helpers@0.1.2':
+    resolution: {integrity: sha512-s6O/NKUuxjK7JP8igrODmZssQLeybp/kY2vgxregvKAzdpEBscYQQ5nWCBHRzESmxrJNK2K93dMUvDrprOsU3A==}
 
-  '@fehujs/helpers@0.1.1':
-    resolution: {integrity: sha512-0IMsTTiULhiEqUF4sxT0GcHWkwAZV7AO2X5S3DCXs097YBKxQ6rcPjfDfZaiFXnmhFPGyaOj+/TQrtFjzReVDw==}
+  '@fehujs/http-server@0.1.6':
+    resolution: {integrity: sha512-ufJyl1pdyeQ/EGzdtxrSHfcL+HaMC8DFixFt1K2BHva4xxv+vMwYDIKfYCULoUZpxcgcxabc9cShUUU7JnKJ4g==}
 
-  '@fehujs/http-server@0.1.5':
-    resolution: {integrity: sha512-Hcgt3CEd8giEitRRxk5U98su+IGQNfXAHmRcFj9AjowDy1n0tG+KfB5A6N7XpMii7DI25E5kGOVP3TClOByMxw==}
-
-  '@fehujs/ioc@1.0.5':
-    resolution: {integrity: sha512-jcnkRZh654OSsRHhlkdDqBj3grxSqZpgdebQ4VBI69WQQFHJmJcKW8qwcwDZ/2b3AbsGWZsiD1sAVjDcTtzrJw==}
+  '@fehujs/ioc@1.0.6':
+    resolution: {integrity: sha512-ZUdyuzK6/5vhTarY5qR8/+nLbgL3ucFS+rPuZBOYZFSmOmKah6zVlJo+1xssKypWwyzXkJ9GmCriGR1d0Pbttg==}
 
   '@fehujs/template-parser@1.0.1':
     resolution: {integrity: sha512-vLxFiVixh7WUOv0hOj6alTUOQ4HA2otRWQNMbZidaSKCz+X/38SnnOvRns2p/WCNnApgtvHGExa4zi0p57WETw==}
@@ -963,10 +957,6 @@ snapshots:
   '@esbuild/win32-x64@0.24.2':
     optional: true
 
-  '@fehujs/build@0.1.1':
-    dependencies:
-      esbuild: 0.24.2
-
   '@fehujs/build@0.2.0':
     dependencies:
       esbuild: 0.24.2
@@ -985,27 +975,19 @@ snapshots:
       - supports-color
       - tedious
 
-  '@fehujs/helpers@0.1.0':
-    dependencies:
-      '@fehujs/build': 0.1.1
-      '@fehujs/tsconfig': 1.0.0
-      '@paralleldrive/cuid2': 2.2.2
-      '@types/node': 22.10.2
-      typescript: 5.7.2
-
-  '@fehujs/helpers@0.1.1':
+  '@fehujs/helpers@0.1.2':
     dependencies:
       '@paralleldrive/cuid2': 2.2.2
 
-  '@fehujs/http-server@0.1.5':
+  '@fehujs/http-server@0.1.6':
     dependencies:
-      '@fehujs/helpers': 0.1.1
-      '@fehujs/ioc': 1.0.5
+      '@fehujs/helpers': 0.1.2
+      '@fehujs/ioc': 1.0.6
       '@fehujs/template-parser': 1.0.1
       dotenv: 16.4.7
       formidable: 3.5.2
 
-  '@fehujs/ioc@1.0.5':
+  '@fehujs/ioc@1.0.6':
     dependencies:
       reflect-metadata: 0.2.2
 
