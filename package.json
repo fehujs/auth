@@ -1,6 +1,6 @@
 {
   "name": "@fehujs/auth",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "User authentication build-in module for Fehujs apps",
   "main": "build/index.js",
   "type": "module",
@@ -39,7 +39,7 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@fehujs/database": "^0.1.6",
+    "@fehujs/database": "^0.1.7",
     "@fehujs/helpers": "^0.1.0",
     "@fehujs/http-server": "^0.1.5",
     "argon2": "^0.41.1",

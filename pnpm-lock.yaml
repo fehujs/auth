@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fehujs/database':
-        specifier: ^0.1.6
-        version: 0.1.6
+        specifier: ^0.1.7
+        version: 0.1.7
       '@fehujs/helpers':
         specifier: ^0.1.0
         version: 0.1.0
@@ -201,8 +201,8 @@ packages:
   '@fehujs/build@0.2.0':
     resolution: {integrity: sha512-5eRH3gmjOvRm7FpKgF+UAehxSSbQ60fP2fwuAqY3fzOJIbg9cPbe7pTMi4dX2POYaQyFPdTTznYvxn5IJyjNxg==}
 
-  '@fehujs/database@0.1.6':
-    resolution: {integrity: sha512-i/ZJ1RctRSdWGde0haCKHRx2ygj6taZBuyejgK2TSsa41ydOKLEQ2czyhLk+B0Is1lle6DyagKoDjwkgh6I7Sw==}
+  '@fehujs/database@0.1.7':
+    resolution: {integrity: sha512-iHVDoGH69ERXBcIjzjj3KMZxtyryiT5UgBOcl2kr7jcPFsNyMF1qlN+wGZDgYYqj8PT0a0Ivfeex0cZUJxxAcg==}
 
   '@fehujs/helpers@0.1.0':
     resolution: {integrity: sha512-bNLu94ZnzMv512vT4lJuikQGtkMkQxJhqDC4G7w0JNCUS0VmK5RbOh5Kc1rkNxZD3JfOCPn6rlkz0PciJ8gsaQ==}
@@ -971,7 +971,7 @@ snapshots:
     dependencies:
       esbuild: 0.24.2
 
-  '@fehujs/database@0.1.6':
+  '@fehujs/database@0.1.7':
     dependencies:
       knex: 3.1.0(sqlite3@5.1.7)
       sqlite3: 5.1.7
