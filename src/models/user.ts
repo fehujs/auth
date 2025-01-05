@@ -75,7 +75,8 @@ export class User extends BaseModel {
             value: encodeURIComponent(authToken.token as string),
             httpOnly: true,
             secure: true,
-            expires: new Date(Date.now() + AUTH_TOKEN_COOKIE_EXPIRES).toUTCString()
+            sameSite: "Strict",
+            expires: new Date(Date.now() + AUTH_TOKEN_COOKIE_EXPIRES).toUTCString(),
         })
     }
 
